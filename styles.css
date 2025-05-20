@@ -44,8 +44,9 @@ h1, .geist {
 }
 
 .subtitle, .description {
+    font-family: "Inter", sans-serif;
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 2rem;
     max-width: 800px;
     margin-left: 0;
@@ -53,10 +54,11 @@ h1, .geist {
 }
 
 .description {
-    font-weight: 300;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
     max-width: 700px;
     margin: 0 0 2rem 0;
-    color: #333;
+    color: #3f3f3f;
 }
 
 .video-section {
@@ -70,7 +72,7 @@ h1, .geist {
 
 video.main-video {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     height: auto;
     display: block;
     background: #000;
@@ -91,6 +93,23 @@ video.main-video {
 }
 .mute-btn:hover, .mute-btn:focus {
     background: #e0e0e0;
+}
+
+.social-links {
+    margin-top: 1.2rem;
+    font-size: 1.4rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+}
+.social-links a {
+    color: #222;
+    text-decoration: none;
+    margin: 0 0.2rem;
+    transition: color 0.2s;
+}
+.social-links a:hover, .social-links a:focus {
+    color: #0074e0;
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
