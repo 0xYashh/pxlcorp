@@ -1,0 +1,436 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Bytesized font */
+@import url('https://fonts.googleapis.com/css2?family=Bytesized:wght@400&display=swap');
+
+/* Custom properties */
+:root {
+  --pxl-purple: #a855f7;
+  --bg: #ffffff;
+  --text: #000000;
+  --text-gray: #666666;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    /* Grid background */
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    background-size: 50px 50px;
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Main content container */
+#main-content {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Bytesized font styling */
+.bytesized-regular {
+    font-family: "Bytesized", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Ensure purple color is applied */
+.text-pxl-purple {
+    color: #a855f7 !important;
+}
+
+/* Hero section */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
+.hero-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: clamp(6rem, 12vw, 10rem);
+    margin-bottom: 1rem;
+    color: #a855f7;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    color: var(--text-gray);
+    margin-bottom: 3rem;
+    font-style: italic;
+}
+
+/* Navigation styling */
+.hero-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.hero-nav a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.hero-nav a:hover {
+    color: #a855f7;
+    background-color: rgba(168, 85, 247, 0.1);
+}
+
+.hero-nav .bracket {
+    color: var(--text-gray);
+}
+
+.hero-nav .separator {
+    color: var(--text-gray);
+    margin: 0 0.5rem;
+}
+
+/* Section dividers */
+.section-divider {
+    width: 88%;
+    height: 2.3px;
+    background-color:#a855f780;
+    margin: 0 auto;
+    border: none;
+}
+
+/* About section */
+#about,#experiments,#reads,#team {
+    padding: 2.5rem 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content,.experiments-content,.reads-content,.team-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.about-text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-title,.experiments-title,.reads-title,.team-title {
+    color: #a855f7;
+    font-size: clamp(1.1rem, 3vw, 2.5rem);
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.about-description,
+.about-manifesto,
+.about-manifesto-2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.325rem;
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.about-manifesto .highlight {
+    font-weight: 600;
+}
+
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.experiments-description {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.325rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: var(--text);
+}
+
+.experiments-text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.experiment-item {
+    display: block;
+    text-decoration: none;
+    border-left: 3px solid #a855f7;
+    padding-left: 1rem;
+    transition: transform 0.15s ease;
+}
+
+.experiment-item:hover .exp-name,
+.experiment-item:hover .exp-status {
+    color: #a855f7;
+}
+
+.experiment-item:hover {
+    transform: translateX(4px);
+}
+
+.experiment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.exp-name {
+    font-weight: 600;
+    font-size: 1.325rem;
+    color: var(--text);
+}
+
+.exp-status {
+    color: #a855f7;
+    font-size: 0.975rem;
+    white-space: nowrap;
+}
+
+.exp-desc {
+    font-size: 1.3rem;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+    .hero-nav a {
+        min-height: 44px;
+        padding: 0.8rem;
+    }
+    
+    .hero-nav a:active {
+        background-color: rgba(168, 85, 247, 0.2);
+        transform: scale(0.98);
+    }
+}
+
+/* Responsive design */
+@media (min-width: 1600px) {
+    #main-content {
+        max-width: 1600px;
+    }
+    .about-content,
+    .experiments-content {
+        max-width: 1400px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        align-items: flex-start;
+        justify-content: flex-start;
+        min-height: auto;
+    }
+    
+    #main-content {
+        max-width: 100%;
+    }
+    
+    #hero {
+        padding: 3rem 1rem 2rem;
+        min-height: 80vh;
+    }
+    
+    .hero-nav {
+        flex-direction: row;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+        line-height: 1.8;
+    }
+    
+    .hero-nav .separator {
+        display: inline-block;
+    }
+    
+    .hero-nav a {
+        padding: 0.8rem 0.4rem;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .about-title,.experiments-title{
+        font-size: 1.5rem;
+    }
+    
+    .about-content,
+    .experiments-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .about-text,
+    .experiments-text {
+        text-align: left;
+    }
+    
+    .about-image img,  .experiments-image img{
+        max-width: 80%;
+    }
+    
+    #about {
+        padding: 3rem 1.5rem;
+    }
+    
+    #reads, #team {
+        padding: 3rem 1.5rem;
+    }
+ 
+    .exp-desc{
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-nav {
+        font-size: 0.95rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem 0.75rem;
+    }
+    
+    .hero-nav .separator {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) and (min-width: 420px) {
+    .about-title,.experiments-title{
+        font-size: 1.5rem;
+    }
+    .about-content,
+    .experiments-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+    
+    .about-image img,
+    .experiments-image img {
+        max-width: 90%;
+    }
+    
+    .about-description,
+    .about-manifesto,
+    .about-manifesto-2,.exp-desc,.experiments-description,.exp-name,.exp-status{
+        font-size: 1rem;
+    }
+    .exp-desc{
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-title,.experiments-title{
+        font-size: 1.5rem;
+    }
+    #hero {
+        padding: 2rem 1rem 1.5rem;
+        min-height: 70vh;
+    }
+    
+    .hero-nav {
+        gap: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .hero-nav a {
+        padding: 0.6rem 0.3rem;
+        min-height: 40px;
+    }
+    
+    .hero-subtitle {
+        margin-bottom: 2.5rem;
+    }
+    
+    .about-content,
+    .experiments-content {
+        gap: 2rem;
+    }
+    
+    #about {
+        padding: 2rem 1rem;
+    }
+    
+    .about-image img,
+    .experiments-image img {
+        max-width: 95%;
+    }
+    
+    .about-description,
+    .about-manifesto,
+    .about-manifesto-2,.exp-desc,.experiments-description,.exp-name,.exp-status{
+        font-size: 1rem;
+    }
+    .exp-desc{
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero-nav .separator {
+        display: none;
+    }
+    
+    .hero-nav a {
+        width: 100%;
+        max-width: 280px;
+        padding: 0.8rem;
+        text-align: center;
+    }
+} 
