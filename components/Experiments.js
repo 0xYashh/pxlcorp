@@ -9,7 +9,7 @@ export default function Experiments() {
               a growing stack of <span className="highlight">&quot;what if we built this?&quot;</span> ideas.
             </p>
             <div className="experiments-log mt-6">
-              <a href="https://buildslog.pxlcorp.xyz" className="experiment-item" target="_blank" rel="noopener">
+              <a href="/experiments/buildslog" className="experiment-item" target="_blank" rel="noopener">
                 <div className="experiment-header">
                   <span className="exp-name">buildslog</span>
                   <span className="exp-status">[⚡ in progress]</span>

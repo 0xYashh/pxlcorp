@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 export default function Reads() {
   return (
     <>
@@ -7,30 +5,56 @@ export default function Reads() {
         <div className="reads-content">
           <div className="reads-text">
             <h2 className="reads-title">reads</h2>
-            
             <p className="reads-description">
-              this is where we share what we&apos;re learning, building, and thinking about.
-              you&apos;ll find blog posts, updates from the lab, and sometimes papers or notes we find interesting.
+              this is where we share what we’re learning, building, and thinking about. <br />
+              you’ll find blog posts, updates from the lab, and sometimes papers or notes we find interesting.
             </p>
-            
-            <p className="reads-manifesto">
-              &gt;pxl? : a pixel is the tiniest building block of every image you see. 
-              just like pixels, we believe small ideas stacked with care, 
-              creativity, and hustle can turn into something beautiful and 
-              impactful.
-            </p>
-            
-            <div className="about-manifesto">
-              <p>we build.</p>
-              <p>we break.</p>
-              <p>we learn.</p>
-              <p>we repeat.</p>
-              <p><span className="highlight">we ship. we iterate. we document. we evolve.</span></p>
+
+            {/* founder's note */}
+            <div className="reads-log mt-6">
+              <div className="read-item">
+                <span className="read-name">&gt; founder's-note</span>
+                </div>
+                <p className="read-desc">
+                  why pxlcorp exists. who’s building it. <br />
+                  what this is all about.
+                </p>
+                <a href="/reads/founder-note" className="read-link">
+                  [ read note → ]
+                </a>
+        
             </div>
-          </div>
+
+            {/* blog */}
+            <div className="reads-log mt-6">
+              <div className="read-item">
+                <span className="read-name">&gt; blog</span>
+                </div>   
+                <p className="read-desc">
+                long-form thoughts & internet experiments from pxlcorp.
+                </p>
+                <a href="/reads/blogs" className="read-link">
+                  [ read blogs → ]
+                </a>
+            
+            </div>
+
+            {/* build notes */}
+            <div className="reads-log mt-6">
+              <div className="read-item">
+                <span className="read-name">&gt; build-notes</span>
+                </div>
+                <p className="read-desc">
+                raw notes, experiments, and logs from inside pxlcorp.
+                </p>
+                <a href="/reads/builds-notes" className="read-link">
+                  [ read builds → ]
+                </a>
           
-          <div className="about-image">
-            <Image src="/images/mac.png" alt="Inspiration" width={500} height={400} />
+            </div>
+
+
+
           </div>
         </div>
       </section>
@@ -38,4 +62,4 @@ export default function Reads() {
       <div className="section-divider"></div>
     </>
   )
-} 
+}

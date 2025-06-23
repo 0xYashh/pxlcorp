@@ -1,7 +1,12 @@
 import { JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
-const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'] })
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  style: ['normal', 'italic'], 
+  weight: ['400', '700'],      
+})
+
 
 export const metadata = {
   title: 'pxlcorp - building cool things on internet',

@@ -1,11 +1,37 @@
-export default function Team() {
+export default function team() {
   return (
     <>
-      <section id="team" className="py-20 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-mono font-bold mb-12">team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 justify-center">
-            {/* Team members will be added based on design sample */}
+      <section id="team">
+        <div className="team-content">
+          <div className="team-text">
+            <h2 className="team-title">teams</h2>
+            <p className="team-description">
+              the team behind pxlcorp.
+            </p>
+            <div className="team-log mt-6">
+              <div className="team-item">
+                <div className="team-header">
+                  <span className="teammate-name">yash</span>
+                  <span className="teammate-status">[ founder/ceo ]</span>
+                </div>
+              </div>
+
+              <a href="/team/yash" className="team-link">
+                [ about yash → ]
+              </a>
+
+            </div>
+            {/* you? */}
+            <div className="team-item mt-4">
+              <div className="team-header">
+                <span className="teammate-name">wanna join ?</span>
+                <span className="teammate-status">[ open position ]</span>
+                </div>
+              </div>
+              <a href="/team/join-team" className="team-link  hover:text-pxl-purple">
+                [ join the team → ]
+              </a>
+         
           </div>
         </div>
       </section>
